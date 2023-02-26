@@ -3,31 +3,26 @@
  *            Développé en TDD
  * 3IL Ingenieurs
  */
-package exercice2;
+package fibo;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Test
+ * Test la class FiboIterator puis Fibonacci
  * @author Romain PALAYRET
  * @version 1.00
  */
-public class TestFibo {
-
+public class TestFibonacci {
+    
 
     /**
      *  Test n°1
-     *  affiche les 5 premiers termes de la suite de Fibonacci
-     *  (1,1,2,3,5)
+     *  FiboIterator.hasNext() renvoie true
      */
-    public static void Test1() {
-        for (Integer x : new Fibonacci(5))
-            System.out.println(x);
-    }
 
-    /**
-     * Lance tous les tests de la classe 1 par 1
-     * @param args
-     */
-    public static void main(String[] args) {
-        Test1();
+    @Test
+    public void Test1() {
+        assertEquals(true, (new FiboIterator(5)).hasNext());
     }
 }
