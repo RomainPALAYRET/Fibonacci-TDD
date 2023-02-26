@@ -14,7 +14,7 @@ import java.util.Iterator;
  */
 public class FiboIterator implements Iterator<Integer> {
 
-    int borne, compteur;
+    int borne, compteur, valActuelle, valSuivante;
     /**
      * Constructeur de l'itérateur de la classe Fibonacci
      * @param borne la borne max jusqu'à laquelle il est possible d'Itérer
@@ -22,6 +22,8 @@ public class FiboIterator implements Iterator<Integer> {
     public FiboIterator(int borne) {
         this.borne = borne;
         compteur = 0;
+        valActuelle = 1;
+        valSuivante = 1;
     }
 
     /**
@@ -39,7 +41,10 @@ public class FiboIterator implements Iterator<Integer> {
     @Override
     public Integer next() {
         compteur += 1;
-        return 1;
+        final int valSuivante2 = valActuelle + valSuivante;
+        valActuelle = valSuivante;
+        valSuivante = valSuivante2;
+        return valActuelle;
     }
 }
 
