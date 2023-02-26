@@ -59,7 +59,7 @@ public class TestFibonacci {
     
     /**
      *  Test n°5
-     *  FiboIterator.next()  4 fois renvoie 3 la 4ème valeur de la suite de fibo est 3
+     *  FiboIterator.next()  4 fois renvoie 3 la 5ème valeur de la suite de fibo est 5
      */
     @Test
     public void Test5() {
@@ -67,6 +67,6 @@ public class TestFibonacci {
         it.next();
         it.next();
         it.next();
-        assertEquals(3, it.next());
+        assertEquals(5, it.next());
     }
 }
