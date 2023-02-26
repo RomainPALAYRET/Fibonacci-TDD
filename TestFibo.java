@@ -69,4 +69,18 @@ public class TestFibonacci {
         it.next();
         assertEquals(5, it.next());
     }
+    
+    
+    /**
+     *  Test n°6
+     *  Il est possible de parcourir l'Iterable Fibonacci a l'aide d'un forEach
+     */
+    @Test
+    public void Test6() {
+        String result = "";
+        for (int nb : new Fibonacci(5)) {
+            result += "" + nb + ",";
+        }
+        assertEquals("1,1,2,3,5,", result);
+    }
 }
