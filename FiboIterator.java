@@ -39,7 +39,7 @@ public class FiboIterator implements Iterator<Integer> {
     @Override
     public Integer next() {
         compteur += 1;
-        return null;
+        return 1;
     }
 }
 
