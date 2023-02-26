@@ -14,15 +14,25 @@ import static org.junit.jupiter.api.Assertions.*;
  * @version 1.00
  */
 public class TestFibonacci {
-    
+
 
     /**
      *  Test n°1
-     *  FiboIterator.hasNext() renvoie true
+     *  FiboIterator.hasNext() renvoie true car la borne max est à 5
      */
 
     @Test
     public void Test1() {
         assertEquals(true, (new FiboIterator(5)).hasNext());
+    }
+
+    /**
+     *  Test n°2
+     *  FiboIterator.hasNext() renvoie false car la borne max est à 0
+     */
+
+    @Test
+    public void Test2() {
+        assertEquals(false, (new FiboIterator(0)).hasNext());
     }
 }
