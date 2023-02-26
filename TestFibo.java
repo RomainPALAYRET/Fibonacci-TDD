@@ -45,4 +45,14 @@ public class TestFibonacci {
         it.next();
         assertEquals(false, it.hasNext());
     }
+    
+    /**
+     *  Test n°4
+     *  FiboIterator.next() renvoie 1 la première valeur de la suite de fibo est 1
+     */
+    @Test
+    public void Test4() {
+        FiboIterator it = new FiboIterator(1);
+        assertEquals(1, it.next());
+    }
 }
