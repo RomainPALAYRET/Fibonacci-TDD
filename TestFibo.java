@@ -55,4 +55,18 @@ public class TestFibonacci {
         FiboIterator it = new FiboIterator(1);
         assertEquals(1, it.next());
     }
+    
+    
+    /**
+     *  Test n°5
+     *  FiboIterator.next()  4 fois renvoie 3 la 4ème valeur de la suite de fibo est 3
+     */
+    @Test
+    public void Test5() {
+        FiboIterator it = new FiboIterator(10);
+        it.next();
+        it.next();
+        it.next();
+        assertEquals(3, it.next());
+    }
 }
